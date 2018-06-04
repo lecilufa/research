@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Selectable - Default functionality</title>
+ 
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.0/jquery-ui.css">
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.0/jquery-ui.min.js"></script>
+ 
+  <style>
+  #feedback { font-size: 1.4em; }
+
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 10%; }
+
+
+  #selectable .ui-selecting { background: green; }
+  
+  #selectable .ui-selected { background: #F39814; color: white; }
+  
+  
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    //$("#selectable").selectable();
+    //selectable和 sortable不能同时存在
+    //$("#selectable").sortable();
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="selectable">
+  <li class="ui-widget-content">Item 1</li>
+  <li class="ui-widget-content">Item 2</li>
+  <li class="ui-widget-content">Item 3</li>
+  <li class="ui-widget-content">Item 4</li>
+  <li class="ui-widget-content">Item 5</li>
+  <li class="ui-widget-content">Item 6</li>
+  <li class="ui-widget-content">Item 7</li>
+</ul>
+ 
+ 
+</body>
+</html>

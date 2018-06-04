@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+
+<style type="text/css">
+
+@page { 
+	margin: 20px;
+	size: A4;
+	
+ }
+
+@media print
+{
+	.detailTable {page-break-after:always;} /*表示在这个元素之后 PDF强制换到下一页*/
+}
+
+body{
+	margin: 0px;
+	font-family: 'Arial Unicode MS'; /*必须引用中文字体，才能显示中文*/
+}
+
+.tdFont{
+	font-size: 12px;
+}
+
+.tdName{
+	width: 80px;
+	vertical-align: top;
+}
+
+.colon{
+	vertical-align: top;
+}
+
+.tdValue{
+	width: 680px;
+	
+}
+
+
+.detailTable{
+	
+    border-spacing: 0;
+    font-size: 10px;
+    
+    table-layout:fixed; /*这个保证表格不会被撑开  设定长度是多少就是多少*/
+  
+	border:none;
+	border-collapse: collapse;
+	
+}
+
+.detailTable td{
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.th{
+	font-weight: bold;
+}
+
+.td{
+	/*word-wrap: break-word; */  /* 这个可以保证中文换行 问题又出了 英文空格也被换行了，这不应该 */
+}
+
+
+</style>
+
+</head>
+<body>
+
+	<table style="border: none;">
+	
+		<tr>
+			<td colspan="3" style="text-align: center;">
+				COLLYER LOGISTICS SOUTH CHINA LIMITED
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="3" style="text-align: center;"  >
+				高樂物流華南有限公司
+			</td>
+		</tr>
+	
+		<tr>
+			<td colspan="3" style="text-align: center;color: red; text-align: right; font-size: 16px; "   >
+				<b style="margin-right: 14px; ">Cancelled</b>
+			</td>
+		</tr>
+	
+		<tr >
+			<td class="tdName tdFont">Voucher No</td>
+			<td class="colon tdFont">:</td>
+			<td class="tdValue tdFont">APHKG16050001</td>
+		</tr>
+		<tr >
+			<td class="tdName tdFont">Voucher Date</td>
+			<td class="colon tdFont">:</td>
+			<td class="tdValue tdFont">2016-05-01</td>
+		</tr>
+		<tr >
+			<td class="tdName tdFont">Memo</td>
+			<td class="colon tdFont">:</td>
+			<td class="tdValue tdFont">相信不少人都碰到过这个问题：网页中提交评论之类的，评论文字全长也就几十个字而已，用富文本编辑器有点夸张，所以用textarea实现，但评论的内容存到数据库，再读出来显示在网页上</td>
+		</tr>
+		<tr >
+			<td class="tdName tdFont">Creator</td>
+			<td class="colon tdFont">:</td>
+			<td class="tdValue tdFont">ALAN LUI</td>
+		</tr>
+		
+		<tr >
+			<td class="tdName tdFont">Auditor</td>
+			<td class="colon tdFont">:</td>
+			<td class="tdValue tdFont">--</td>
+		</tr>
+		
+		
+		
+	</table>
+	
+	<br/>
+		 
+	<table class="detailTable" >
+	
+		<tr>
+			<td class="th" >Account Code</td>
+			<td class="th" >Account Name</td>
+			<td class="th" >Description</td>
+			<td class="th" >Debit(HKD)</td>
+			<td class="th" >Credit(HKD)</td>
+		</tr>
+		
+		<tr>
+			<td class="td" style="width: 70px;" >64010601</td>
+			<td class="td" style="width: 100px; word-break:break-all;word-wrap:break-word;">OTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOST</td>
+			<td class="td" style="width: 300px; word-break:break-all;word-wrap:break-word;">相信不少人都碰到过这个问题网页中提交评论之类的评论文字全长OTHERCHA324234234RGECOSTOTHERCHARGE,COSTOTHERCHARGECOSTOTHER\CHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOSTOTHERCHARGECOST也就几十个字而已，用富文本编辑器有点夸张，所以用textarea实现，但评论的内容存到数据库，再USD 10039234.058754读出来显示在网页上 Debit:USD 130.00相信不少人都碰到过这个问题：网页中提交评论之类的，评论文字全长也就几十个字而已，用富文本编辑器有点夸张，所以用textarea实现，但评论的内容存到数据库，再读出来显示在网页上 Debit:USD 130.00</td>
+			<td class="td" style="width: 100px; word-break:break-all;word-wrap:break-word;">88888888888888888888888888888888888888888888888888888888888888888888</td>
+			<td class="td" style="width: 100px;">57,154.73</td>
+		</tr>
+		
+	</table>
+	
+	
+	
+</body>
+</html>

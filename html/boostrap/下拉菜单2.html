@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Boostrap下拉菜单</title>
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+
+<style type="text/css">
+
+.dropdown-menu{
+	
+	
+	top: 90%;
+	
+	
+}
+
+
+/*
+	这个CSS可以让下拉菜单在鼠标移上去的时间自动弹出
+  	注意用了这个CSS就把 <a> 的  data-toggle="dropdown" 属性去掉， 否则看上去很不自然 在 click <a>的时候
+*/
+.nav
+> li:hover .dropdown-menu {display: block;}
+
+
+
+/*下面两个CSS可以让下拉菜单左上角的小箭头消失*/
+.navbar .nav > li > .dropdown-menu::before {
+    border-bottom: 0;
+
+}
+.navbar .nav > li > .dropdown-menu::after {
+    border-bottom: 0;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<br><br><br><br><br><br>
+
+<ul class="nav nav-pills">
+              <li class="active"><a href="#">Regular link</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop4" role="button"  href="#">Dropdown <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                                   
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button"  href="#">Dropdown 2 <b class="caret"></b></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button"  href="#">Dropdown 3 <b class="caret"></b></a>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+</ul>
+
+
+
+
+<br>
+
+
+
+
+
+	<div class="navbar">
+		<div class="navbar-inner">
+		
+		<ul class="nav nav-pills">
+              <li class="active"><a href="#">Regular link</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop4" role="button"  href="#">Dropdown <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                                   
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button"  href="#">Dropdown 2 <b class="caret"></b></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button"  href="#">Dropdown 3 <b class="caret"></b></a>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+		</ul>
+		
+		
+		
+		<!--  
+			<a class="brand" href="#">Title</a>
+			
+			
+			
+			<ul class="nav">
+				<li class="active"><a href="#">首页</a></li>
+				<li>
+						<a href="#">Link</a>
+				
+				</li>
+				<li><a href="#">Link</a></li>
+			</ul>
+			
+			-->
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

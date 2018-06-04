@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+.ckk{
+
+	padding: 5px;
+}
+
+</style>
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+
+<script type="text/javascript">
+
+function changeVal(){
+	
+	var aa = $("#val").val();
+	
+	$("#hiddenVal").val(aa);
+	
+	var a = $("#hiddenVal")[0].attributes['onchange1'].nodeValue;
+	
+	alert(a);
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<form>
+  <fieldset>
+    <legend class="ckk">
+    	<a href="#">在边框上的字</a>	
+    </legend>
+    	可以输入内容：<input type="text" id="val" />
+  		 随便输入内容：<input type="text" />
+  		 
+  		 <input type="hidden" id="hiddenVal"  onchange1="alert(this.value);" >
+  		 
+  		 <input type="button" value="click"  onclick="changeVal();">
+  </fieldset>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+
+<script type="text/javascript">
+	function showFile() {
+		var ffs = $("#upload")[0].files;
+
+		//var ffs1 = $("#upload1")[0];
+
+		console.log(ffs);
+
+	}
+	
+	function aa(){
+		var a =1;
+		a = 2; 
+		a = 3;
+		
+		alert(a);
+	}
+	
+	$(document).ready(function(){
+		  $("#select").on("click",aa);
+		  
+		  $("#select").on("click",function(){
+			  alert(456);
+		  });
+	});
+	
+</script>
+
+</head>
+<body>
+
+	<form action="http://localhost:8080/CUSTOMER/tutorial/upload.html" method="post">
+
+		<input id="upload" name="myFile" type="file" multiple="multiple">
+
+		&nbsp; 
+		<input type="button" value="click" onclick="showFile();">
+		&nbsp;
+		<input type="submit">
+		
+		<select id="select">
+			<option>1</option>
+		</select>
+		
+
+	</form>
+	
+	<div style="background-color: orange; height:300px;width: 600px; overflow-x: scroll;overflow-y:hidden;">
+	
+		<div style="background-color: green; height: 700px;width: 1600px;"></div>
+	
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+
+<script type="text/javascript">
+	function spaceRemove(tar) {
+		var name = tar.value;
+		tar.value = name.replace(/\s/g," ").trim();
+	}
+	
+		
+	function checkChange(tar){
+		
+		var aa = $(window.last).trigger("leave");
+		
+		alert(aa[0].result);
+		
+		//alert("触发" + tar.id + " 事件");
+		window.last = tar;
+
+	}
+	
+	function leaveMe(tar){
+		alert(tar.id);
+	}
+	
+	
+	$(document).ready(function(){
+		 
+		$("input[name=type]").on("leave",function(){
+			alert("离开事件 " + this.id);
+			
+			this.result = true;
+			
+		});
+		
+		
+		window.last = $("#a1")[0];
+	});
+	
+</script>
+
+
+
+
+</head>
+<body>
+
+	<input type="radio" id="a1" name="type" value="1" checked="checked"  onclick="checkChange(this);" >
+
+	<input type="radio" id="a2" name="type" value="2" onclick="checkChange(this);"  >
+</body>
+</html>

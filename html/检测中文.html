@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+
+<script type="text/javascript">
+	function isChinese(s) {
+		var patrn = /[\u4E00-\u9FA5]|[\uFE30-\uFFA0]/gi;
+		if (!patrn.exec(s)) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+</script>
+
+
+<script>
+
+	function testChinese(){
+		var str = $("#kk").val();
+		var aa = isChinese(str);
+		alert(aa);
+	}
+
+//AKYUREK KARDEŞLER TAR.URN.MAK.TAŞ.MAD.SAN.TIC.LTD.STI.
+</script>
+
+</head>
+<body>
+
+<input id="kk" style="width: 700px;" />
+<input  type="button" value="click" onclick="testChinese();">
+
+</body>
+</html>

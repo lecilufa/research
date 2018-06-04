@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test 2</title>
+
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" />
+
+	<link rel="stylesheet" href="primieUI/themes/aristo/theme.css" />    
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    
+    
+
+    <link rel="stylesheet" href="primieUI/primeui.min.css" />    
+    
+    
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="primieUI/primeui.min.js"></script>
+    
+    <script type="text/javascript">
+    
+	    $(function($) {
+	    	$('#pm1').puimenu();
+	    	
+	    	$('#pm2').puimenu({
+	    	    popup: true,
+	    	    trigger: $('#pm2trigger')
+	    	});
+	    	
+	    	$('button').puibutton();
+	    	
+	    	
+	    	
+	    	$('#dlg').puidialog({
+	            showEffect: 'fade',
+	            hideEffect: 'fade',
+	            minimizable: true,
+	            maximizable: true,
+	            responsive: true,
+	            minWidth: 200,
+	            modal: true,
+	            buttons: [{
+	                    text: 'Yes',
+	                    icon: 'fa-check',
+	                    click: function() {
+	                        $('#dlg').puidialog('hide');
+	                    }
+	                },
+	                {
+	                    text: 'No',
+	                    icon: 'fa-close',
+	                    click: function() {
+	                        $('#dlg').puidialog('hide');
+	                    }
+	                }
+	            ]
+	        });
+	    	
+	    	
+	    	$('#btn-show').puibutton({
+	            icon: 'fa-external-link-square',
+	            click: function() {
+	                $('#dlg').puidialog('show');
+	            }
+	        });
+	    	
+	    	
+	    });
+	    
+	    
+	    
+	    
+	    
+    </script>
+
+</head>
+<body>
+
+
+<h3 class="first">Default</h3>
+<ul id="pm1">
+    <li><h3>File</h3></li>
+    <li><a data-icon="fa-plus">New</a></li>
+    <li><a data-icon="fa-download">Open</a></li>
+    <li><h3>Edit</h3></li>
+    <li><a data-icon="fa-refresh">Undo</a></li>
+    <li><a data-icon="fa-close">Delete</a></li>
+</ul>
+
+
+<h3>Popup</h3>
+<button id="pm2trigger" style="margin-top:0px">Show</button>
+<ul id="pm2">
+    <li><h3>File</h3></li>
+    <li><a data-icon="fa-plus">New</a></li>
+    <li><a data-icon="fa-download">Open</a></li>
+    <li><h3>Edit</h3></li>
+    <li><a data-icon="fa-refresh">Undo</a></li>
+    <li><a data-icon="fa-close">Delete</a></li>
+</ul>
+
+<br>
+
+<button id="btn-show" type="button">Show</button>
+<div id="dlg" title="Godfather I">
+    <p>The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. 
+        His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. 
+        Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, 
+        kind and benevolent to those who give respect, 
+        but given to ruthless violence whenever anything stands against the good of the family.</p>
+</div>
+ 
+
+
+</body>
+</html>

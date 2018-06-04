@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="js/prototype.js"></script>
+
+<script type="text/javascript">
+
+function kk(){
+	alert();
+}
+
+window.onload = function(){
+	
+	var aa = {};
+	
+	aa.bb = kk;
+	
+	console.log(aa);
+	
+	var str = Object.toJSON(aa);
+	
+	console.log(str);
+}
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

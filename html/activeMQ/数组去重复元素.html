@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+
+<script type="text/javascript">
+
+	//去除数组重复元素算法
+	
+	//思路 
+	//1. 把数组中所有元素转化为一个对象的key， 值随便写
+	//2. 遍历这个对象的key
+	
+	//因为js对象本身就是一个map  key不重复  所以第1步中已经去了重复， 第2步就是把数据读出来而已
+	
+   var student = ['qiang','ming','tao','li','liang','you','qiang','tao'];
+   function unique(arr){
+        var obj = {};
+        for(var m in arr){    //1. 把数组中所有元素转化为一个对象的key， 值随便写
+        	obj[arr[m]]="随便什么东西";
+        }
+        
+        console.log(obj);
+
+        
+        var tmparr = new Array();  
+       for(var n in obj){		 //2. 遍历这个对象的key 
+    	   
+         tmparr.push(n);
+       }
+     return tmparr;
+  }
+   
+   var aa = unique(student);
+   
+  // console.log(aa);
+   
+</script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

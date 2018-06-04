@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+
+
+
+
+<script>
+	$(function() {
+		var aa = $("#kk").serializeArray();
+		$("#kk").submit();
+		
+
+	});
+</script>
+
+</head>
+<body>
+
+	<form id="kk" action="https://www.baidu.com/" method="post"
+		style="display: none;">
+
+		<input name="aa" value="ff" /> <input name="bb" value="rr" />
+
+	</form>
+
+</body>
+</html>

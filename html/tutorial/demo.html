@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="通用的css">
+
+<link rel="stylesheet" type="text/css" href="这个页面的css">
+
+<!-- 尽量不要用style标签 -->
+
+<!-- 定义CSS的建议，参看如下CSS -->
+<style type="text/css">
+
+
+.myCss{
+	/*    这个类通用的css     */
+}
+
+.myCss tr{
+	/*   这个类里面tr的css  */
+}
+
+.myCss tr td{
+	/*   这个类里面td的css  */
+}
+
+/*
+
+建议只在table上面加class就可以在这个table下面的所有子元素同时也加上css
+即给最上层元素加CSS 顺带也能给所有子元素加上css
+
+这种做法同样适用于DIV 及页面所有元素
+
+*/
+
+</style>
+
+
+</head>
+<body>
+
+<table class="myCss">
+
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+
+</table>
+
+
+</body>
+</html>

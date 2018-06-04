@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jsencrypt.min.js" ></script>
+
+<script type="text/javascript">
+
+	function test(){
+		//这个JS本身不生成公钥和密钥  ，只能用服务器生成的  或者 LINUX生成的
+		
+		//公钥从服务器拿
+		var PublicKeyString="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKYltIfZJWyT+bgJUU9+3dDG+9sAt6sZX+OS/qGxwa6Xsl+OzvGWYNITL+ODwVhfRQzNV2WmnGhngfzf7SrZq2UCAwEAAQ\=\=";
+		var PrivateKeyString = "...";  //密钥一般不存客户端
+		
+		//加密
+		var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(PublicKeyString);
+        var data = encrypt.encrypt("This is me.");
+        
+        console.log(data);
+        
+        
+        //解密
+        var decrypt = new JSEncrypt();
+        decrypt.setPrivateKey($(PrivateKeyString);
+        var uncrypted = decrypt.decrypt(data);
+        
+        console.log(uncrypted); //应当等于  This is me.
+	}
+
+</script>
+
+</head>
+<body onload="test();">
+
+</body>
+</html>

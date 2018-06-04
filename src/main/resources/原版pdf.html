@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<style>
+@page {
+	-fs-flow-top: 'header';
+	-fs-flow-bottom: 'footer';
+	size: 210mm 297mm;
+	margin-top: 20pt; @
+	top-center {content: element(header)
+}
+
+@
+bottom-center {
+	content: element(footer)
+}
+
+page-break-before
+:always
+}
+#pagenumber:before {
+	content: counter(page);
+}
+
+#pagecount:before {
+	content: counter(pages);
+}
+
+.pageNext {
+	page-break-before: always;
+}
+
+#header {
+	position: running(header);
+	font-style: italic;
+	font-family: Arial Unicode MS;
+	-fs-move-to-flow: 'header';
+	width: 100px;
+	padding-top: 10pt;
+}
+
+#footer {
+	position: running(footer);
+	font-style: italic;
+	font-family: Arial Unicode MS;
+	-fs-move-to-flow: 'footer';
+	color: #6c6ce8;
+}
+
+body {
+	font-size: 11px;
+	font-family: Arial Unicode MS;
+	white-space: inherit;
+}
+
+b {
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+</style>
+<meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+</head>
+<body>
+	<div id='footer' style='text-align: center; margin-top: 0;'>
+		Page <span id='pagenumber' /> of <span id='pagecount' /><span
+			style='margin-left: 150px;'>2016-09-23 11:56:20</span>
+	</div>
+	<div style='width: 100%;'>
+		<table style='margin-top: 20px; border: none;' width='100%'>
+			<tbody>
+				<tr style='border: none;'>
+					<td colspan='4' style='text-align: center;'>COLLYER LOGISTICS
+						SOUTH CHINA LIMITED</td>
+				</tr>
+				<tr style='border: none;'>
+					<td colspan='4' style='text-align: center; width: 100%;'>高樂物流華南有限公司</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table style='border: none;'>
+			<tr style'border:none;'>
+				<td style='width: 70px;'>Voucher No</td>
+				<td><b>:</b>&nbsp;&nbsp;&nbsp;APHKG16090001</td>
+				<td colspan='2'></td>
+			</tr>
+			<tr style='border: none;'>
+				<td>Voucher Date</td>
+				<td><b>:</b>&nbsp;&nbsp;&nbsp;2016-09-01</td>
+				<td colspan='2'></td>
+			</tr>
+			<tr style='border: none;'>
+				<td style='vertical-align: top;'>Memo</td>
+				<td colspan='3'><b>:</b>&nbsp;&nbsp;&nbsp;HKGNYCI1607036/CNHKG16071576</td>
+			</tr>
+			<tr style='border: none;'>
+				<td>Creator</td>
+				<td><b>:</b>&nbsp;&nbsp;&nbsp;PETER CHAN</td>
+				<td colspan='2'></td>
+			</tr>
+			<tr style='border: none;'>
+				<td>Auditor</td>
+				<td><b>:</b>&nbsp;&nbsp;&nbsp;--</td>
+				<td colspan='2'></td>
+			</tr>
+		</table>
+		<table border='0' id='dt'
+			style='width: 100%; table-layout: fixed; word-break: break-all; word-wrap: break-word;'>
+			<thead>
+				<tr style='line-height: 25px;'>
+					<td style='border: solid 1px #333; width: 15%;'>Account Code</td>
+					<td style='border: solid 1px #333; width: 27%;'>Account Name</td>
+					<td style='border: solid 1px #333; width: 28%;'>Description</td>
+					<td style='border: solid 1px #333; width: 15%;'>Debit(HKD)</td>
+					<td style='border: solid 1px #333; width: 15%;'>Credit(HKD)</td>
+				</tr>
+			</thead>
+			<tr>
+				<td style='border: solid 1px #333;'>640104</td>
+				<td style='border: solid 1px #333;'>HANDLING FEE COST<br />-SEA
+					SHIPPING LINE - NEW JERSEY
+				</td>
+				<td style='border: solid 1px #333; white-space: inherit;'>HKGNYCI1607036/CNHKG16071576<br>Debit:
+					USD 3,586.79
+				</td>
+				<td style='text-align: right; border: solid 1px #333;'>27,976.96</td>
+				<td style='text-align: right; border: solid 1px #333;'></td>
+			</tr>
+			<tr>
+				<td style='border: solid 1px #333;'>220201</td>
+				<td style='border: solid 1px #333;'>ACCOUNT PAYABLE<br />-SEA
+					SHIPPING LINE - NEW JERSEY
+				</td>
+				<td style='border: solid 1px #333; white-space: inherit;'>HKGNYCI1607036/CNHKG16071576<br>Credit:
+					USD 3,586.79
+				</td>
+				<td style='text-align: right; border: solid 1px #333;'></td>
+				<td style='text-align: right; border: solid 1px #333;'>27,976.96</td>
+			</tr>
+			<tr>
+				<td colspan='3' style='text-align: right; border: solid 1px #333;'>Total:</td>
+				<td style='text-align: right; border: solid 1px #333;'>27,976.96</td>
+				<td style='text-align: right; border: solid 1px #333;'>27,976.96</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

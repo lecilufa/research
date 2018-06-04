@@ -1,0 +1,16 @@
+RMI和 rest json 在道理上是相同的  即 概念相同
+
+都是远程调用 服务器上某个service的方法  并得到返回结果
+
+只是形式不同罢了
+RMI传输的是JAVA对象   rest json传输的是JSON字符串
+
+无论是RMI或者 rest json ， service的执行总是发生在服务器  ，不会发生在客户端
+
+使用RMI时应该明确这一点
+
+RMI调用是多线程的，服务器会为每个请求开启一个线程来处理。
+
+RMI是RPC(remote call)的一种,市面上常用的RPC有 REST JSON， 还有那个zookeeper, dubbo
+
+RMI是java自带的最基本的那一种

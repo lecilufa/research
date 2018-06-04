@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="jquery.min.1.8.3.js"></script>
+
+<script type="text/javascript">
+	function spaceRemove(tar) {
+		var name = tar.value;
+		tar.value = name.replace(/\s/g," ").trim();
+		
+		
+		
+	}
+	
+	function testJSON(){
+		
+		var json = {};
+		
+		json['0'] = "zero";
+		json['1'] = "one"
+		
+		for(m in json){
+			console.log(m + ' = ' + json[m]);
+		}
+		
+		
+		console.log(json['3'] == undefined );
+	}
+	
+	function testMap(){
+		
+		var myMap = new Map();
+		myMap.set(0, 'zero');
+		myMap.set(1, 'one');
+		for (var [key, value] of myMap) {
+		  console.log(key + ' = ' + value);
+		}
+		// 0 = zero
+		// 1 = one
+
+		for (var key of myMap.keys()) {
+		  console.log(key);
+		}
+		// 0
+		// 1
+
+		for (var value of myMap.values()) {
+		  console.log(value);
+		}
+		// zero
+		// one
+
+		for (var [key, value] of myMap.entries()) {
+		  console.log(key + ' = ' + value);
+		}
+	}
+	
+	window.onbeforeunload = function(){
+		 console.log("112");
+		return "123";
+	}
+	
+</script>
+
+
+
+
+</head>
+<body >
+
+	<input id="kk" style="width: 700px;" onblur="spaceRemove(this);" />
+	<br>
+	<input type="button" value="click" onclick=" testJSON();">
+
+</body>
+</html>
