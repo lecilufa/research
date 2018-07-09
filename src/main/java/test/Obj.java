@@ -11,4 +11,8 @@ public class Obj {
 		System.out.println("saying");
 		
 	}
+	
+	public static void main(String[] args) {
+		new Obj();
+	}
 }
